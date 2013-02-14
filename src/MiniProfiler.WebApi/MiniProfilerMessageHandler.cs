@@ -1,15 +1,12 @@
 ﻿namespace MiniProfiler.WebApi
 {
-    using Newtonsoft.Json;
-    using StackExchange.Profiling;
     using System;
     using System.Collections.Generic;
-    using System.IO;
     using System.Linq;
     using System.Net.Http;
-    using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
+    using StackExchange.Profiling;
 
     /// <summary>
     /// Extension to <see cref="HttpClientHandler"/> to provide profiling across WebAPI web requests.
@@ -20,11 +17,6 @@
         /// The request header name.
         /// </summary>
         public const string RequestHeaderName = "MiniProfilerRequestHeader";
-
-        /// <summary>
-        /// The header name used to serialize the data.
-        /// </summary>
-        public const string ResultsHeaderName = "MiniProfilerResults";
 
         /// <summary>
         /// The <see cref="MiniProfiler"/> used for the request.
@@ -72,27 +64,21 @@
         /// <param name="response">The response from a request.</param>
         /// <param name="profiler">The profiler to add the results to.</param>
         /// <param name="newStartMilliseconds">The start time used to update the remote timings.</param>
-        private static HttpResponseMessage AddRemoteProfilerResults(HttpResponseMessage response, MiniProfiler profiler, decimal newStartMilliseconds)
+        internal static HttpResponseMessage AddRemoteProfilerResults(HttpResponseMessage response, MiniProfiler profiler, decimal newStartMilliseconds)
         {
             // Get the serialized results header.
             IEnumerable<string> miniProfilerResults;
-            if (!response.Headers.TryGetValues(ResultsHeaderName, out miniProfilerResults)) return response;
+            if (!response.Headers.TryGetValues(MiniProfilerHandler.ResultsHeaderName, out miniProfilerResults))
+                return response;
 
             // Get the data.
             string resultsHeader = miniProfilerResults.First();
-            byte[] compressedData = Convert.FromBase64String(resultsHeader);
+            MiniProfiler remoteProfiler = ProfilerExtensions.Deserialize(resultsHeader);
 
-            // Decompress, de-serialize and add the results.
-            using (MemoryStream decompressedData = compressedData.Decompress())
-            {
-                string serializedprofiler = Encoding.UTF8.GetString(decompressedData.ToArray());
-                var remoteProfiler = JsonConvert.DeserializeObject<MiniProfiler>(serializedprofiler);
+            // Update the timings of the remote profiler results.
+            remoteProfiler.Root.UpdateStartMillisecondTimingsToAbsolute(newStartMilliseconds);
 
-                // Update the timings of the remote profiler results.
-                remoteProfiler.Root.UpdateStartMillisecondTimingsToAbsolute(newStartMilliseconds);
-
-                profiler.AddProfilerResults(remoteProfiler);
-            }
+            profiler.AddProfilerResults(remoteProfiler);
 
             return response;
         }
