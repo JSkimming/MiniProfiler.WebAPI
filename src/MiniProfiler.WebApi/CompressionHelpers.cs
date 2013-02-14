@@ -1,5 +1,6 @@
 ﻿namespace MiniProfiler.WebApi
 {
+    using System;
     using System.IO;
     using System.IO.Compression;
 
@@ -15,6 +16,8 @@
         /// <returns>The compressed buffer of the supplied <paramref name="uncompressedBuffer"/>.</returns>
         internal static byte[] Compress(this byte[] uncompressedBuffer)
         {
+            if (uncompressedBuffer == null) throw new ArgumentNullException("uncompressedBuffer");
+
             using (var uncompressedStream = new MemoryStream(uncompressedBuffer))
             using (var compressedStream = new MemoryStream())
             using (var gZipStream = new GZipStream(compressedStream, CompressionMode.Compress, true))
@@ -39,6 +42,8 @@
         /// <returns>The decompressed buffer <paramref name="compressedBuffer"/>.</returns>
         internal static byte[] Decompress(this byte[] compressedBuffer)
         {
+            if (compressedBuffer == null) throw new ArgumentNullException("compressedBuffer");
+
             using (var compressedStream = new MemoryStream(compressedBuffer))
             using (var gZipStream = new GZipStream(compressedStream, CompressionMode.Decompress))
             using (var uncompressedStream = new MemoryStream())
@@ -48,9 +53,6 @@
                 // written to the uncompressed stream.
                 gZipStream.CopyTo(uncompressedStream);
                 gZipStream.Close();
-
-                // Move to the beginning.
-                uncompressedStream.Seek(0, SeekOrigin.Begin);
 
                 return uncompressedStream.ToArray();
             }

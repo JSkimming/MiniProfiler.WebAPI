@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{797569
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{48C426A0-3279-4278-A5D0-B6DE2F4D8664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebApi.UnitTests", "Tests\MiniProfiler.WebApi.UnitTests\MiniProfiler.WebApi.UnitTests.csproj", "{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,15 @@ Global
 		{3715BF7A-0675-4D96-BBA6-0B50597A257B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3715BF7A-0675-4D96-BBA6-0B50597A257B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3715BF7A-0675-4D96-BBA6-0B50597A257B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B} = {48C426A0-3279-4278-A5D0-B6DE2F4D8664}
 	EndGlobalSection
 EndGlobal
