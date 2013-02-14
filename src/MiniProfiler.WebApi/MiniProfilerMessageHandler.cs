@@ -83,7 +83,7 @@
             byte[] compressedData = Convert.FromBase64String(resultsHeader);
 
             // Decompress, de-serialize and add the results.
-            using (MemoryStream decompressedData = compressedData.DecompressStream())
+            using (MemoryStream decompressedData = compressedData.Decompress())
             {
                 string serializedprofiler = Encoding.UTF8.GetString(decompressedData.ToArray());
                 var remoteProfiler = JsonConvert.DeserializeObject<MiniProfiler>(serializedprofiler);
