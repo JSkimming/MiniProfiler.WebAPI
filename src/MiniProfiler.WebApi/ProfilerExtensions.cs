@@ -1,9 +1,8 @@
-﻿namespace MiniProfiler.WebApi
+﻿namespace StackExchange.Profiling
 {
     using System;
     using System.Text;
     using Newtonsoft.Json;
-    using StackExchange.Profiling;
 
     /// <summary>
     /// The profiler extensions.

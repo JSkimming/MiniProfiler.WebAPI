@@ -1,10 +1,9 @@
-﻿namespace MiniProfiler.WebApi
+﻿namespace StackExchange.Profiling
 {
     using System;
     using System.Linq;
     using Ploeh.AutoFixture;
     using Ploeh.SemanticComparison.Fluent;
-    using StackExchange.Profiling;
     using Xunit;
 
     public class ProfilerExtensionsUnitTests

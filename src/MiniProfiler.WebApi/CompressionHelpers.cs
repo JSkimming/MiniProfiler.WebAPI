@@ -1,4 +1,4 @@
-﻿namespace MiniProfiler.WebApi
+﻿namespace StackExchange.Profiling
 {
     using System;
     using System.IO;

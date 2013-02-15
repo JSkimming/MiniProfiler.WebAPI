@@ -1,11 +1,10 @@
-﻿namespace MiniProfiler.WebApi
+﻿namespace StackExchange.Profiling
 {
     using System;
     using System.Collections.Generic;
     using System.Net.Http;
     using System.Threading;
     using System.Threading.Tasks;
-    using StackExchange.Profiling;
 
     /// <summary>
     /// Handler to add profiling to a Web API service.

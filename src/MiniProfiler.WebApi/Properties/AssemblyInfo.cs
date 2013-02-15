@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MiniProfiler.WebApi")]
+[assembly: AssemblyTitle("MiniProfiler.WebAPI")]
 [assembly: AssemblyDescription("MiniProfiler integration for ASP.NET Web API providing n-tier profiling")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MiniProfiler.WebApi")]
+[assembly: AssemblyProduct("MiniProfiler.WebAPI")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

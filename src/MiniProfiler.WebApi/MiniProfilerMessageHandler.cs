@@ -1,4 +1,4 @@
-﻿namespace MiniProfiler.WebApi
+﻿namespace StackExchange.Profiling
 {
     using System;
     using System.Collections.Generic;
@@ -6,7 +6,6 @@
     using System.Net.Http;
     using System.Threading;
     using System.Threading.Tasks;
-    using StackExchange.Profiling;
 
     /// <summary>
     /// Extension to <see cref="HttpClientHandler"/> to provide profiling across WebAPI web requests.
