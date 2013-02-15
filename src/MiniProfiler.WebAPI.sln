@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{79756989-DB5E-4FD3-BD9C-BFDE61850300}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -13,6 +13,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{48C426A0-3279-4278-A5D0-B6DE2F4D8664}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebAPI.UnitTests", "Tests\MiniProfiler.WebAPI.UnitTests\MiniProfiler.WebAPI.UnitTests.csproj", "{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApi", "Tests\ExampleApi\ExampleApi.csproj", "{BB1F3E95-4BF1-4C0A-A65A-3F5B0684E5CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,11 +30,16 @@ Global
 		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1F3E95-4BF1-4C0A-A65A-3F5B0684E5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1F3E95-4BF1-4C0A-A65A-3F5B0684E5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1F3E95-4BF1-4C0A-A65A-3F5B0684E5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1F3E95-4BF1-4C0A-A65A-3F5B0684E5CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B} = {48C426A0-3279-4278-A5D0-B6DE2F4D8664}
+		{BB1F3E95-4BF1-4C0A-A65A-3F5B0684E5CB} = {48C426A0-3279-4278-A5D0-B6DE2F4D8664}
 	EndGlobalSection
 EndGlobal
