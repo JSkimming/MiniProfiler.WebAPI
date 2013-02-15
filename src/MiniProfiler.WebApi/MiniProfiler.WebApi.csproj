@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StackExchange.Profiling</RootNamespace>
-    <AssemblyName>MiniProfiler.WebApi</AssemblyName>
+    <AssemblyName>MiniProfiler.WebAPI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -24,7 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\MiniProfiler.WebApi.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\MiniProfiler.WebAPI.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,7 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\MiniProfiler.WebApi.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\MiniProfiler.WebAPI.xml</DocumentationFile>
     <BuildPackage>true</BuildPackage>
   </PropertyGroup>
   <ItemGroup>
@@ -63,7 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MiniProfiler.WebApi.nuspec" />
+    <None Include="MiniProfiler.WebAPI.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

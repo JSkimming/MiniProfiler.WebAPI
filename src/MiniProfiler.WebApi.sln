@@ -8,11 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{797569
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebApi", "MiniProfiler.WebApi\MiniProfiler.WebApi.csproj", "{3715BF7A-0675-4D96-BBA6-0B50597A257B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebAPI", "MiniProfiler.WebAPI\MiniProfiler.WebAPI.csproj", "{3715BF7A-0675-4D96-BBA6-0B50597A257B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{48C426A0-3279-4278-A5D0-B6DE2F4D8664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebApi.UnitTests", "Tests\MiniProfiler.WebApi.UnitTests\MiniProfiler.WebApi.UnitTests.csproj", "{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebAPI.UnitTests", "Tests\MiniProfiler.WebAPI.UnitTests\MiniProfiler.WebAPI.UnitTests.csproj", "{7D68333D-51BE-4BF6-A6F2-F4191BC3FC1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
