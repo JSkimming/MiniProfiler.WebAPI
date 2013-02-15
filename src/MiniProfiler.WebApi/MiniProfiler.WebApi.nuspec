@@ -25,9 +25,9 @@ using this tokenized nuspec file.
     <tags>profiler sql mvc asp.net performance timing</tags>
     <language>en-US</language>
     <dependencies>
-      <dependency id="Microsoft.Net.Http" version="(,2]" />
-      <dependency id="MiniProfiler" version="(,2]" />
-      <dependency id="Newtonsoft.Json" version="(,4]" />
+      <dependency id="Microsoft.Net.Http" version="2.0" />
+      <dependency id="MiniProfiler" version="2.0" />
+      <dependency id="Newtonsoft.Json" version="4.0" />
     </dependencies>
   </metadata>
 </package>
