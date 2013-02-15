@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebApi", "MiniProfiler.WebApi\MiniProfiler.WebApi.csproj", "{3715BF7A-0675-4D96-BBA6-0B50597A257B}"
-EndProject
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{79756989-DB5E-4FD3-BD9C-BFDE61850300}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProfiler.WebApi", "MiniProfiler.WebApi\MiniProfiler.WebApi.csproj", "{3715BF7A-0675-4D96-BBA6-0B50597A257B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{48C426A0-3279-4278-A5D0-B6DE2F4D8664}"
 EndProject
