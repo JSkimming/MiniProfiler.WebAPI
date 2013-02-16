@@ -1,12 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@using StackExchange.Profiling;
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        @this.InitClientTimings()
         <meta charset="utf-8" />
         <title>@ViewBag.Title - My ASP.NET MVC Application</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
+        @this.TimeScript("Content/css", Styles.Render("~/Content/css"))
+        @this.TimeScript("modernizr", Scripts.Render("~/bundles/modernizr"))
     </head>
     <body>
         <header>
@@ -42,7 +44,8 @@
             </div>
         </footer>
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
+        @this.TimeScript("jquery", Scripts.Render("~/bundles/jquery"))
+        @this.TimeScript("scripts", RenderSection("scripts", required: false) ?? (IHtmlString)MvcHtmlString.Empty)
+        @MiniProfiler.RenderIncludes()
     </body>
 </html>
